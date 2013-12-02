@@ -18,6 +18,18 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+// Render /bizzers: rosham.biz/bizzers
+app.get('/bizzers', function(request, response) {
+  var data = fs.readFileSync('bizzers.html').toString();
+  response.send(data);
+});
+
+//Render /bamwich: rosham.biz/bamwich
+app.get('/bamwich', function(request, response) {
+  var data = fs.readFileSync('bamwich.html').toString();
+  response.send(data);
+});
+
 // Render example.com/orders
 app.get('/orders', function(request, response) {
   global.db.Order.findAll().success(function(orders) {
