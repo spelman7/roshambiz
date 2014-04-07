@@ -4,9 +4,13 @@
 
 # npm packages
 node_modules
+npm-debug.log
 
 # Mac
 .DS_Store
 
 # Emacs
 *~
+
+# Espresso
+rosham.biz.esproj
