@@ -12,21 +12,35 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8000);
 
+var oneDay = 86400000;
+app.use(express.compress());
+app.use(express.static(__dirname + '/public', { maxAge: oneDay }));
+
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('index.html').toString();
+  var data = fs.readFileSync('./views/templates/index.html').toString();
   response.send(data);
 });
 
 // Render /bizzers: rosham.biz/bizzers
 app.get('/bizzers', function(request, response) {
-  var data = fs.readFileSync('bizzers.html').toString();
+  var data = fs.readFileSync('./views/templates/bizzers.html').toString();
   response.send(data);
 });
 
 //Render /bamwich: rosham.biz/bamwich
 app.get('/bamwich', function(request, response) {
-  var data = fs.readFileSync('bamwich.html').toString();
+  var data = fs.readFileSync('./views/templates/bamwich.html').toString();
+  response.send(data);
+});
+
+app.get('/test', function(request, response) {
+  var data = fs.readFileSync('./views/templates/test.html').toString();
+  response.send(data);
+});
+
+app.get('/assets/test', function(request, response) {
+  var data = fs.readFileSync('./views/assets/test.css').toString();
   response.send(data);
 });
 
