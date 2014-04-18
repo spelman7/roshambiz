@@ -83,13 +83,15 @@ h6, .h6 {
 }
 .blog-title {
   margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 60px;
+  margin-bottom: 20px;
+  font-size: 30px;
   font-weight: normal;
+  font-family: "aw-conqueror-didot", serif;
 }
 .blog-description {
   font-size: 20px;
   color: #999;
+  font-family: "aw-conqueror-didot", serif;
 }
 
 
@@ -98,7 +100,7 @@ h6, .h6 {
  */
 
 .left-content {
-	border-right: solid 1px silver;
+	border-right: solid 1px #eee;
 	line-height: 1.5;
 }
 
@@ -108,9 +110,6 @@ h6, .h6 {
 
 /* Sidebar modules for boxing content */
 .footnote-bar {
-	background-image: url('../img/lined_paper.png');
-	background-repeat: repeat;
-	height: 100px;
 }
 
 .footnote-text {
@@ -123,6 +122,7 @@ h6, .h6 {
 	position: relative;
 	padding-top: 3px;
 	text-align: left;
+	font-size: 10px;
 }
 
 .footnote sup {
