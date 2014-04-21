@@ -34,13 +34,13 @@ app.get('/bamwich', function(request, response) {
   response.send(data);
 });
 
-app.get('/test', function(request, response) {
-  var data = fs.readFileSync('./views/templates/test.html').toString();
+app.get('/grain', function(request, response) {
+  var data = fs.readFileSync('./views/templates/grain.html').toString();
   response.send(data);
 });
 
-app.get('/assets/test', function(request, response) {
-  var data = fs.readFileSync('./views/assets/test.css').toString();
+app.get('/test', function(request, response) {
+  var data = fs.readFileSync('./views/templates/test.html').toString();
   response.send(data);
 });
 

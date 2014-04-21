@@ -2,24 +2,6 @@
  * Globals
  */
 
-body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
-}
-
-
 /*
  * Override Bootstrap's default container.
  */
@@ -32,29 +14,40 @@ h6, .h6 {
 
 
 /*
- * Masthead for nav
+ * Nav
  */
 
 .blog-masthead {
-  background-color: #428bca;
+  background-color: #000;
   box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
-/* Nav links */
-.blog-nav-item {
+.blog-nav-item-l {
   position: relative;
-  display: inline-block;
+  display: inline;
   padding: 10px;
   font-weight: 500;
-  color: #cdddeb;
+  color: #cccccc;
+  font-size: 20px;
+  float: left;
 }
-.blog-nav-item:hover,
-.blog-nav-item:focus {
+
+.blog-nav-item-r {
+  position: relative;
+  display: inline;
+  padding: 10px;
+  font-weight: 500;
+  color: #cccccc;
+  font-size: 15px;
+  float: right;
+}
+
+.blog-nav-item-r:hover,
+.blog-nav-item-r:focus {
   color: #fff;
   text-decoration: none;
 }
 
-/* Active state gets a caret at the bottom */
 .blog-nav .active {
   color: #fff;
 }
@@ -72,43 +65,83 @@ h6, .h6 {
   border-left:   5px solid transparent;
 }
 
+.blog-nav-logo {
+	vertical-align: middle;
+	max-height: 30px;
+	max-width: 206px;
+	padding-bottom: 5px;
+}
+
+/* ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}*/
 
 /*
- * Blog name and description
+ * Body
  */
-
-.blog-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+ 
+body {
+	font-family: "aw-conqueror-didot", serif;
 }
-.blog-title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 30px;
-  font-weight: normal;
-  font-family: "aw-conqueror-didot", serif;
-}
-.blog-description {
-  font-size: 20px;
-  color: #999;
-  font-family: "aw-conqueror-didot", serif;
-}
-
-
-/*
- * Main column and sidebar layout
- */
-
+ 
 .left-content {
 	border-right: solid 1px #eee;
-	line-height: 1.5;
 }
 
-.main-article {
-	line-height: 1.5;
+.index-top {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
-/* Sidebar modules for boxing content */
+.index-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.index-description {
+  font-size: 16px;
+  text-align: center;
+}
+
+.product-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.product-title {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 40px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.product-pitch {
+	font-size: 24px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 16px;
+  text-align: left;
+}
+
+/* 
+ * Footnotes 
+ */
+ 
 .footnote-bar {
 }
 
@@ -122,7 +155,7 @@ h6, .h6 {
 	position: relative;
 	padding-top: 3px;
 	text-align: left;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .footnote sup {
@@ -130,36 +163,6 @@ h6, .h6 {
 	margin-right: 2px;
 	vertical-align: top;
 }
-
-/* Pagination */
-.pager {
-  margin-bottom: 60px;
-  text-align: left;
-}
-.pager > li > a {
-  width: 140px;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 30px;
-}
-
-
-/*
- * Blog posts
- */
-
-.blog-post {
-  margin-bottom: 60px;
-}
-.blog-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-.blog-post-meta {
-  margin-bottom: 20px;
-  color: #999;
-}
-
 
 /*
  * Footer
@@ -171,4 +174,230 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+}
+
+/*
+ * Twitter Effects
+ */
+
+ @font-face {
+	font-family: 'tweet';
+	src:url('../font/tweet.eot');
+	src:url('../font/tweet.eot?#iefix') format('embedded-opentype'),
+		url('../font/tweet.woff') format('woff'),
+		url('../font/tweet.ttf') format('truetype'),
+		url('../font/tweet.svg#tweet') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	padding: 0px;
+	margin: 0px;
+}
+
+section {
+	position: relative;
+	height: 60px;
+	width: 100%;
+	background-color: #fff;
+}
+
+header, footer {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	text-align: center;
+	font-size: 16px;
+	padding: 15px;
+	color: #fff;
+}
+
+header {
+	padding-right: 90px;
+	padding-left: 90px;
+	line-height: 1.4em;
+}
+
+footer .sharing{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.fb-like, .twitter-share-button {
+	margin-left: 3px;
+}
+
+.twitter-share-button {
+	margin-bottom: -3px;
+}
+
+.fb-like {
+	height: 21px !important;
+	overflow: hidden;	
+}
+
+
+header a, footer a {
+	text-decoration: underline;
+	color: #fff;
+}
+
+header a:hover, footer a:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+/* Effect Related */
+
+.hole {
+
+	-webkit-transition: background 300ms ease-in-out;
+	   -moz-transition: background 300ms ease-in-out;
+	    -ms-transition: background 300ms ease-in-out;
+	     -o-transition: background 300ms ease-in-out;
+			transition: background 300ms ease-in-out;
+
+	/* Font smoothing + HW acceleration for webkit */
+	-webkit-font-smoothing: antialiased;
+	-webkit-transform: translateZ(0px);
+
+	/* Centering */
+	margin-left: -100px;
+  	position: absolute;
+	margin-top: -25px;
+  	left: 50%;
+  	top: 50%;
+
+	width: 200px;
+	height: 50px;
+	
+	font-size: 0px;
+	line-height: normal;
+	box-sizing: initial;
+	
+}
+
+.twitter-follow-button {
+	margin-left: -77px;
+	position: absolute;
+	margin-top: -14px;
+	left: 50%;
+	top: 50%;
+}
+
+.door {
+
+	-webkit-transition-timing-function: ease-in-out;
+	   -moz-transition-timing-function: ease-in-out;
+		-ms-transition-timing-function: ease-in-out;
+		 -o-transition-timing-function: ease-in-out;
+		    transition-timing-function: ease-in-out;
+
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.door:after {
+	font-family: 'tweet', sans-serif;
+	position: absolute;
+	content: "\e000";
+	font-size: 35px;
+	display: block;
+	height: 20px;
+	width: 0px;
+}
+
+/*
+ * Long Bird
+ */
+ 
+.long-bird {
+	background-color: #fff;
+}
+
+/* Stationary CSS */
+
+.long-bird .hole {
+	margin-left: -95px;
+	width: 190px;
+}
+
+.long-bird .door {
+
+	-webkit-transition: left 400ms;
+	   -moz-transition: left 400ms;
+		-ms-transition: left 400ms;
+		 -o-transition: left 400ms;
+			transition: left 400ms;
+
+	height: 100%;
+	width: 50%;
+	background-color: #fff;
+}
+
+.long-bird .door:after {
+	margin-left: -20px;
+	font-size: 46px;
+	color: #4099FF;
+	top: -5px;
+}
+
+.long-bird .left {
+	left: 0%;
+	top: 0%;
+}
+
+.long-bird .left:after {
+    right: 17px;
+}
+
+.long-bird .right {
+	left: 50%;
+	top: 0%;
+}
+
+.long-bird .right:after {
+	left: 4px;
+}
+
+/* Effects on Hover */
+
+.long-bird .hole:hover .left {
+	left: -74px;
+}
+
+.long-bird .hole:hover .right {
+	left: 170px;
+}
+
+/* FAQ */
+
+.accordion {
+	margin-bottom:20px;
+}
+
+.accordion-group {
+	margin-bottom:2px;
+	border:1px solid #e5e5e5;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+.accordion-heading {
+	border-bottom:0;
+}
+
+.accordion-heading .accordion-toggle {
+	display:block;
+	padding:8px 15px;
+}
+
+.accordion-toggle {
+	cursor:pointer;
+}
+
+.accordion-inner {
+	padding:9px 15px;
+	border-top:1px solid #e5e5e5;
 }
