@@ -13,4 +13,10 @@ npm-debug.log
 *~
 
 # Espresso
-rosham.biz.esproj
+rosham.biz.esproj/
+roshambiz.esproj/
+roshambiz.esproj
+/roshambiz.esproj
+roshambiz.esproj/user.elliottspelman.espressostorage
+*.esproj
+*.espressostorage
