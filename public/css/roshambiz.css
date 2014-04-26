@@ -97,8 +97,7 @@ body {
 
 .index-top {
   padding-top: 20px;
-  padding-bottom: 20px;
-
+  padding-bottom: 30px;
 }
 
 .index-title {
@@ -110,18 +109,18 @@ body {
 }
 
 .index-description {
-  font-size: 16px;
+  font-size: 24px;
   text-align: center;
 }
 
 .product-section {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top: solid 1px #eee;
 }
 
 .product-title {
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	font-size: 40px;
 	font-weight: normal;
 	text-align: left;
@@ -136,6 +135,18 @@ body {
 .product-description {
   font-size: 16px;
   text-align: left;
+}
+
+.product-name {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.twitter-section {
+	border-top:  solid 1px #eee;
 }
 
 /* 
