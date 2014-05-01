@@ -137,6 +137,91 @@ var grantnotes = function(text, footbar, optArgs) {
 
 }
 
+$.when(
+    $("#one").animate({left: 100}, 3000).promise(),
+    $("#two").animate({left: 200}, 3000).promise()
+).done(function() {
+    $("#three").animate({left: 300}, 3000).promise()
+    .done(function() {
+        $("#four").animate({left: 400}, 3000).promise()
+    })
+})
+
+
+// Sliding Ideas Animation
+
 jQuery(document).ready(function($) {
-	grantnotes($('div.main-article'), $('.footnote-bar'));
+
+	$( "div.index-ideas" ).hide();
+	
+	$.when(
+		$( "#idea1" )
+			.queue(function() { 
+				$( this ).addClass('animated slideInRight').dequeue(); 
+			})
+			.show()
+			.delay( 5000 )
+			.queue(function() { 
+				$( this ).removeClass('slideInRight').dequeue(); 
+			})
+			.queue(function() { 
+				$( this ).addClass('slideOutLeft').dequeue(); 
+			})
+			.delay( 500 )
+			.queue(function() { 
+				$( this ).hide().dequeue(); 
+			})
+			.promise()
+	).done(function() {
+		$( "#idea2" )
+			.queue(function() { 
+				$( this ).addClass('animated slideInRight').dequeue(); 
+			})
+			.show()
+			.delay( 5000 )
+			.queue(function() { 
+				$( this ).removeClass('slideInRight').dequeue(); 
+			})
+			.queue(function() { 
+				$( this ).addClass('slideOutLeft').dequeue(); 
+			})
+			.delay( 500 )
+			.queue(function() { 
+				$( this ).hide().dequeue(); 
+			})
+			.promise()
+		.done(function() {
+			$( "#idea3" )
+				.queue(function() {
+					$( this ).addClass('animated slideInRight').dequeue();
+				})
+				.show()
+				.delay( 5000 )
+				.queue(function() { 
+					$( this ).removeClass('slideInRight').dequeue(); 
+				})
+				//.queue(function() { 
+				//	$( this ).addClass('slideOutLeft').dequeue(); 
+				//})
+				//.delay( 500 )
+				//.queue(function() { 
+				//	$( this ).hide().dequeue(); 
+				//})
+				.promise()
+		})
+	});
+
 });
+
+
+// Run Grantnotes
+
+
+jQuery(document).ready(function($) {
+
+	grantnotes($('div.main-article'), $('.footnote-bar'));
+	
+	
+		
+});
+
