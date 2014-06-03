@@ -77,11 +77,11 @@
 /*
  * Body
  */
- 
+
 body {
 	font-family: "aw-conqueror-didot", serif;
 }
- 
+
 .left-content {
 	border-right: solid 1px #eee;
 }
@@ -173,10 +173,10 @@ body {
 	border-top:  solid 1px #eee;
 }
 
-/* 
- * Footnotes 
+/*
+ * Footnotes
  */
- 
+
 .footnote-bar {
 }
 
@@ -272,7 +272,7 @@ footer .sharing{
 
 .fb-like {
 	height: 21px !important;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 
@@ -314,11 +314,11 @@ header a:hover_effect, footer a:hover_effect {
 
 	width: 200px;
 	height: 50px;
-	
+
 	font-size: 0px;
 	line-height: normal;
 	box-sizing: initial;
-	
+
 }
 
 .twitter-follow-button {
@@ -355,7 +355,7 @@ header a:hover_effect, footer a:hover_effect {
 /*
  * Long Bird
  */
- 
+
 .long-bird {
 	background-color: #fff;
 }
@@ -454,4 +454,4 @@ header a:hover_effect, footer a:hover_effect {
 	border-top:1px solid #e5e5e5;
 }
 
-/* Test hover */
+@media screen and (max-width:480px){#desktop-only{display:none;}}
