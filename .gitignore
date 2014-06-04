@@ -20,3 +20,6 @@ roshambiz.esproj
 roshambiz.esproj/user.elliottspelman.espressostorage
 *.esproj
 *.espressostorage
+
+#jekyll
+_site
