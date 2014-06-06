@@ -1,34 +1,288 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>jQuery.queue demo</title>
-  <style>
-	div{width:100px;height:100px;position:relative}
-	#one{background:red}
-	#two{background:pink}
-	#three{background:blue}
-	#four{background:orange}
-  </style>
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
- <div id="one"></div>
- <div id="two"></div>
- <div id="three"></div>
- <div id="four"></div>
- 
-<script>
-$.when(
-    $("#one").animate({left: 100}, 3000).promise(),
-    $("#two").animate({left: 200}, 3000).promise()
-).done(function() {
-    $("#three").animate({left: 300}, 3000).promise()
-    .done(function() {
-        $("#four").animate({left: 400}, 3000).promise()
-    })
-})
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Useless products with a heart of gold.">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/ico/favicon.ico">
 
-</script>
- 
-</body>
+    <title>The RoShamBusiness</title>
+
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/roshambiz.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/js/roshambiz.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//use.typekit.net/atd4rzl.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Start Google Analytics ga.js code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42980641-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <!--End Google Analytics ga.js code -->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-inverse navbar-announce" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <img src="/img/logos/main_white.png" class="blog-nav-logo" alt="The RoShamBusiness" />
+          </a>
+        </div><!-- div navbar header -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/bizzers">Bizzers</a></li>
+                <li><a href="/bamwich">Bamwich</a></li>
+                <li><a href="/grain">Grain(ofSalt)</a></li>
+              </ul>
+            </li>
+            <li><a href="https://twitter.com/roshambiz" target="_blank">Twitter</a></li>
+            <li><a href="http://blog.rosham.biz">Blog</a></li>
+          </ul>
+        </div><!-- div collapse navbar collapse -->
+      </div><!-- div container fluid -->
+    </nav><!-- main navbar nav -->
+
+    <div class="row row-announce">
+      <div class="container announce">
+        <strong>&#9733;</strong> Coming to Kickstarter in July! <strong>&#9733;</strong>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-14 left-content main-article">
+
+          <div class="row index-top">
+
+            <div class="col-sm-6">
+              <img src="/img/logos/main_vertical.png" class="img-responsive" alt="Main Logo" />
+            </div>
+
+            <div class="col-sm-10">
+              <h1 class="index-title">We Make Things Literally.</h1>
+              <br>
+              <p class="index-description">The RoShamBusiness designs literalizations of things<sup>1</sup><span class="footnote-text">metaphors, idioms, inside jokes, figures of speech, nebulous concepts, memes</span> which probably shouldn't exist.</p>
+              <div class="index-brackets">
+                <div class="index-bracket-left">{</div>
+                <div class="index-bracket-right">}</div>
+        <div id="idea1" class="index-ideas">A cat, out of the bag.</div>
+        <div id="idea2" class="index-ideas">An egg made out of chickens.</div>
+        <div id="idea3" class="index-ideas">A tree that fell in a forest.</div>
+                <div style="clear: both;"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row product-section">
+
+            <div class="col-sm-8">
+              <div class="product-title">
+                <img src="/img/logos/bizzers.png" class="img-responsive" alt="Bizzers" />
+              </div>
+              <p class="product-pitch">A pair of scissors, made entirely of rock and paper.</p>
+              <p class="product-description">Finally, an answer to the eternal question<sup>2</sup><span class="footnote-text">"Would you rather be rock, paper, or scissors?"</span>. Painstakingly crafted out of perfectly equal parts rock, paper, and scissors, RoShamBizzers may help you somehow.</p>
+              <a href="/bizzers"><button class="bttn bttn-4 bttn-4c icon-arrow-right">The RoShamBizzers</button></a>
+            </div>
+
+            <div class="col-sm-8">
+              <img src="/img/products/bizzers-1.jpg" class="img-responsive" alt="Placeholder Image"/>
+            </div>
+
+          </div>
+
+          <div class="row product-section">
+
+            <div class="col-sm-8">
+              <div class="product-title">
+                <img src="/img/logos/bamwich.png" class="img-responsive" alt="Bamwich" />
+              </div>
+              <p class="product-pitch">A sandwich, with <em>everything</em>.</p>
+              <p class="product-description">Take two pieces of bread to perfect geographic antipodes<sup>3</sup><span class="footnote-text"><a href="http://i.imgur.com/KWpyhcO.jpg">Points on the Earth's surface mathematically opposite one another</a></span>, put them down on the ground at the same time, and you've got a RoShamBamwich.<sup>4</sup><span class="footnote-text">That's the DIY method. It's probably easier to buy one from us.</span></p>
+              <a href="/bamwich"><button class="bttn bttn-4 bttn-4c icon-arrow-right">The RoShamBamwich</button></a>
+            </div>
+
+            <div class="col-sm-8">
+              <img src="/img/products/bamwich-2.jpg" class="img-responsive" alt="Placeholder Image"/>
+            </div>
+
+          </div>
+
+          <div class="row product-section">
+
+            <div class="col-sm-8">
+              <div class="product-title">
+                <img src="/img/logos/grain.png" class="img-responsive" alt="Grain" />
+              </div>
+              <p class="product-pitch">A grain of salt, to take.</p>
+              <p class="product-description">Feeling overly beholden to The Truth? Exaggerate to your heart's content with a pack of RoShamGrain<sup>5</sup><span class="footnote-text">(ofSalt)</span>! Perfect for politicians, pundits, commenters of YouTube.</p>
+              <a href="/grain"><button class="bttn bttn-4 bttn-4c icon-arrow-right">The RoShamGrain</button></a>
+            </div>
+
+            <div class="col-sm-8">
+              <img src="/img/products/grain-1.jpg" class="img-responsive" alt="Placeholder Image"/>
+            </div>
+
+          </div>
+
+          <div class="row product-section">
+
+            <div class="col-sm-8">
+              <div class="product-title">
+                <img src="/img/logos/tree.png" class="img-responsive" alt="Tree" />
+              </div>
+              <p class="product-pitch">A tree that fell in a forest.<sup>6</sup><span class="footnote-text">that nobody heard</span></p>
+              <p class="product-description">"If a tree falls in a forest with nobody there to hear it, did it make a sound?" It's a debate that has transfixed humanity for generations. We'd like to <a href="http://cdn.stripersonline.com/9/9e/1000x1000px-LL-9ed540c7_o-MAN-FORK-URETHRA-570.jpeg" target="_blank">stick a fork in it</a>.</p>
+              <button class="bttn bttn-4 bttn-4c icon-arrow-right" type="button" disabled="disabled">The RoShamTree</button>
+            </div>
+
+            <div class="col-sm-8">
+              <img src="/img/products/coming-soon.png" class="img-responsive" alt="Placeholder Image"/>
+            </div>
+
+          </div>
+
+          <div class="row twitter-section">
+            <div class="index-title">
+              <h2>Please Maintain Correspondence!</h2>
+            </div>
+      <section class="long-bird">
+
+        <div class="hole">
+            <div class="door left"></div>
+            <div class="door right"></div>
+            <a href="https://twitter.com/roshambiz" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="false">Follow @roshambiz</a>
+        </div>
+
+      </section>
+          </div>
+
+          <div class="row-fluid faq">
+      <div class="col-sm-16">
+        <h3>F<sup>7</sup><span class="footnote-text">"How often does a question need to be asked in order to be considered 'frequently asked'?" could have been our first question listed here. If it had been, the answer would be twice.</span>AQ</h3>
+        <div class="accordion" id="accordion2">
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">I don't get it.</a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse">
+              <div class="accordion-inner">You will.</div>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Is this serious?</a>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+              <div class="accordion-inner">This is 65% serious and 35% ironic.</div>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">What if we all see different colors? What if your red was actually my blue?</a>
+            </div>
+            <div id="collapseFour" class="accordion-body collapse">
+              <div class="accordion-inner">This is not actually a dumb question. Even though we've all thought it, it's a question that really gets down to the reality/perception crux of a whole lot of interesting things.<br><br>Recent experiments have shown that different light wavelengths don't necessarily have predetermined mental perceptions associated with them. Through new techniques in gene therapy, scientists can give previously color-blind primates the ability to see new colors. There is evidence to suggest that their perception of those colors might differ slightly, giving credence to the theory that color is "a private sensation."<br><br>Check out <a href="http://www.neitzvision.com/content/publications/2009-Mancuso-Gene_therapy_for_red-green_colour_blindness-Nature.pdf">this 2009 paper in Nature</a> if you're interested.</div>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">Where can I buy these RoSham-Products?</a>
+            </div>
+            <div id="collapseFive" class="accordion-body collapse">
+              <div class="accordion-inner">Check out our Kickstarter! (If there is a link in that previous sentence, we have started running the Kickstarter. If there is no link, we have not started running our Kickstarter and you can't buy any RoSham-Products yet. Sorry.</div>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">Can I suggest new RoSham-Products?</a>
+            </div>
+            <div id="collapseSix" class="accordion-body collapse">
+              <div class="accordion-inner">Yes, please! Either <a href="https://twitter.com/roshambiz" target="_blank">tweet them at us</a>, or just think about them in the shower. We'll know.</div>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">How can the X-Men character Mystique shapeshift into the form of people wearing clothes and then take off the clothes? Is she removing parts of herself? Does it hurt?</a>
+            </div>
+            <div id="collapseSeven" class="accordion-body collapse">
+              <div class="accordion-inner">This is probably the best question so far. Our guess is that Mystique has a large degree of control over the density of her transformations. Otherwise, how would she be able to change into shapes of such disparate size? Maybe before she gets rid of a clothing item, she can make sure that only a very tiny portion of her body mass is going with it - like plucking a few hairs.</div>
+            </div>
+          </div>
+
+              </div>
+        </div>
+       </div>
+
+     </div><!-- col-sm-14 -->
+
+
+
+        <div class="col-sm-2 footnote-bar">
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="blog-footer">
+
+    </div>
+
+
+  <!-- Closing Scripts -->
+
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- <script src="http://getbootstrap.com/assets/js/docs.min.js"></script> -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <!-- Google Analytics analytics.js -->
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-42980641-1', 'rosham.biz');
+   ga('send', 'pageview');
+
+    </script>
+     <!-- End Google Analytics analytics.js code -->
+
+  </body>
 </html>
