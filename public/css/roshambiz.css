@@ -479,8 +479,7 @@ header a:hover_effect, footer a:hover_effect {
 }
 
 .row-announce {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 15px;
@@ -490,6 +489,7 @@ header a:hover_effect, footer a:hover_effect {
 
 .navbar-announce {
   margin-bottom: 0px;
+  border-radius: 0px;
 }
 
 /* Codrops button effects */
@@ -513,9 +513,10 @@ header a:hover_effect, footer a:hover_effect {
 	color: inherit;
 	background: none;
 	cursor: pointer;
-	padding: 25px 80px;
+	padding: 20px 10px;
 	display: inline-block;
-	margin-top: 15px;
+	margin-top: 25px;
+  margin-bottom: 35px;
 	letter-spacing: 1px;
 	font-weight: 700;
 	outline: none;
@@ -561,8 +562,8 @@ header a:hover_effect, footer a:hover_effect {
 
 /* Button 4 */
 .bttn-4 {
-	border-radius: 50px;
-	border: 3px solid #000000;
+	border-radius: 10px;
+	border: 2px solid #000000;
 	color: #000000;
 	overflow: hidden;
   font-size: 20px;
@@ -584,7 +585,7 @@ header a:hover_effect, footer a:hover_effect {
 	position: absolute;
 	height: 100%;
 	font-size: 125%;
-	line-height: 3.3;
+	line-height: 2.9;
 	color: #000000;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -603,8 +604,13 @@ header a:hover_effect, footer a:hover_effect {
 }
 
 .bttn-4c:hover:before {
-	left: 80%;
+	left: 75%;
 	opacity: 1;
+}
+
+.bttn-index {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @media screen and (max-width: 25em) {
