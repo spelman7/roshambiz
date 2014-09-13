@@ -1,4 +1,4 @@
-// Define routes for simple SSJS web app. 
+// Define routes for simple SSJS web app.
 // Writes Coinbase orders to database.
 var async   = require('async')
   , express = require('express')
@@ -36,6 +36,11 @@ app.get('/bamwich', function(request, response) {
 
 app.get('/grain', function(request, response) {
   var data = fs.readFileSync('./views/templates/grain.html').toString();
+  response.send(data);
+});
+
+app.get('/bark', function(request, response) {
+  var data = fs.readFileSync('./views/templates/bark.html').toString();
   response.send(data);
 });
 
