@@ -49,6 +49,11 @@ app.get('/test', function(request, response) {
   response.send(data);
 });
 
+app.get('/share', function(request, response) {
+  var data = fs.readFileSync('./views/templates/share.html').toString();
+  response.send(data);
+});
+
 
 // sync the database and start the server
 db.sequelize.sync().complete(function(err) {
