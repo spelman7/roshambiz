@@ -54,6 +54,11 @@ app.get('/share', function(request, response) {
   response.send(data);
 });
 
+app.get('/goose', function(request, response) {
+  var data = fs.readFileSync('./views/templates/goose.html').toString();
+  response.send(data);
+});
+
 
 // sync the database and start the server
 db.sequelize.sync().complete(function(err) {
